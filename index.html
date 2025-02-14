@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Feliz San Valentín owo">
+        <meta name="keywords" content="Kory, Rei, Kenosis, Kor, Reis" >
+        <link rel="stylesheet" href="./CSS/main.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap">
+        <link rel="shortcut icon" href="./IMAGENES/icono.png">
+        <title>Login</title>
+</head>
+<body>
+    <img src="./IMAGENES/kenosis.png" class="Kenosis">
+    <img src="./IMAGENES/rei.png" class="Rei">
+
+    <section class="form-login">
+        <h1>Login</h1>
+        <h2>User</h2>
+        <input class="controls" type="text" id="usuario" name="usuario" value="" placeholder="Tu nombre bonito ♡">
+        <h2>Password</h2>
+        <input class="controls" type="password" id="contrasena" name="contrasena" value="" placeholder="••••">
+        <input class="button" type="submit" name="" value="Enter" onclick="validarLogin()">
+        <p>Pista: Nuestro aniversario.</p>
+    </section>
+
+    <div class="modal" id="imgModal">
+        <div class="modal-content">
+            <p class="textoError">La Niña no te reconoce...</p>
+            <img src="./IMAGENES/Niña.png" id="imgNina">
+            <span class="close" onclick="closeImg()">Reintentar</span>
+        </div>
+        
+    </div>
+    <script src="./JAVASCRIPT/script.js"></script>
+
+</body>
+</html>

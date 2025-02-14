@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background: url(../IMAGENES/fondo.jpg);
+    background-size: contain;
+    background-repeat: repeat;
+    background-position: center center; 
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: url('../IMAGENES/cursor2.cur'), auto;
+
+}
+
+.valentines_card {
+    position: relative;
+    width: 350px;
+    height: 500px;
+    transform-style: preserve-3d;
+    transform: perspective(2500px);
+    cursor: url('../IMAGENES/cursor.cur'), auto;
+    transition: transform 1.5s ease-in-out;
+}
+
+.front_card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(253, 203, 203);
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transform-origin: left;
+    transition: transform 1.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.front_text {
+    font-family: 'Great Vibes', cursive;
+    font-size: 24px;
+    color: #ff4d73;
+    padding: 20px;
+    transition: opacity 0.5s ease-in-out;
+}
+.front_card img {
+    width: 90%; 
+    max-height: 80%;
+    margin: auto;
+    display: block;
+}
+
+.inside_card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 245, 245);
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    z-index: -1;
+}
+
+.inside_text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: #A60657;
+    padding: 20px;
+}
+
+
+.valentines_card.abierta .front_card {
+    transform: rotateY(-160deg);
+}
+
+.valentines_card .front_text,
+.valentines_card .front_card img {
+    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+}
+
+.valentines_card.abierta .front_text,
+.valentines_card.abierta .front_card img {
+    opacity: 0;
+    visibility: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 10px; 
+}
+
+::-webkit-scrollbar-track {
+    background: #f0f0f0; 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ff6b81;
+    border-radius: 10px;
+    border: 2px solid #fff;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ff4757; 
+}
+.contenedor-boton {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin-bottom: 50px;
+
+}
+
+.boton-volver {
+    margin-top: 30px;
+    font-size: 15px;
+    text-decoration: none;
+    color: white;
+    background: #ff7092;
+    padding: 12px 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.096);
+    transition: 0.3s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+    cursor: url('../IMAGENES/cursor.cur'), auto;
+
+
+}
+
+.boton-volver:hover {
+    background: #ff4d73;
+    transform: scale(1.05);
+    font-family: 'Poppins', sans-serif;
+
+}
